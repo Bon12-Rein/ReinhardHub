@@ -5,18 +5,19 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#5B2C6F',
-          dark: '#4A235A',
-          light: '#8E44AD'
+          DEFAULT: '#0044CC',
+          dark: '#0033A3',
+          light: '#3366FF'
         },
         secondary: {
-          DEFAULT: '#FFA500',
-          dark: '#FF8C00'
+          DEFAULT: '#FF6A00',
+          dark: '#CC5500'
         },
-        accent: '#E74C3C'
+        accent: '#333333',
+        background: '#FAFAFA'
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #5B2C6F, #8E44AD, #FFA500)'
+        'gradient-primary': 'linear-gradient(135deg, #0044CC, #3366FF, #FF6A00)'
       }
     },
   },

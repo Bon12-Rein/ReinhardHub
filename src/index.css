@@ -3,15 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #5B2C6F;
-  --color-primary-dark: #4A235A;
-  --color-primary-light: #8E44AD;
-  --color-secondary: #FFA500;
-  --color-secondary-dark: #FF8C00;
-  --color-accent: #E74C3C;
+  --color-primary: #0044CC;
+  --color-primary-dark: #0033A3;
+  --color-primary-light: #3366FF;
+  --color-secondary: #FF6A00;
+  --color-secondary-dark: #CC5500;
+  --color-accent: #333333;
   --color-success: #10B981;
   --color-warning: #F59E0B;
   --color-error: #EF4444;
+  --color-background: #FAFAFA;
 }
 
 html {
@@ -21,7 +22,8 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.5;
-  color: #4B5563;
+  color: var(--color-accent);
+  background-color: var(--color-background);
 }
 
 @layer base {
@@ -72,8 +74,6 @@ body {
   .text-secondary-dark {
     color: var(--color-secondary-dark);
   }
-  
-  
   
   .text-accent {
     color: var(--color-accent);
