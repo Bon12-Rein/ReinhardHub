@@ -10,13 +10,13 @@ export default {
           light: '#40E0D0'
         },
         secondary: {
-          DEFAULT: '#8A2BE2',
-          dark: '#6A1B9A'
+          DEFAULT: '#0044CC',
+          dark: '#003399'
         },
         accent: '#FF8C00'
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #00CED1, #8A2BE2, #FF8C00)'
+        'gradient-primary': 'linear-gradient(135deg, #00CED1, #0044CC, #FF8C00)'
       }
     },
   },
