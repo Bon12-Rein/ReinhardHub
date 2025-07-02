@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #00CED1;
-  --color-primary-dark: #008B8B;
-  --color-primary-light: #40E0D0;
-  --color-secondary: #0044CC;
-  --color-secondary-dark: #003399;
+  --color-primary: #008080;
+  --color-primary-dark: #006666;
+  --color-primary-light: #00A0A0;
+  --color-secondary: #00CCA4;
+  --color-secondary-dark: #00B894;
   --color-accent: #FF8C00;
   --color-success: #10B981;
   --color-warning: #F59E0B;
@@ -22,7 +22,7 @@ body {
   font-family: 'Inter', sans-serif;
   line-height: 1.5;
   color: #4B5563;
-  background-color: #FAFAFA;
+  background-color: #FEFFFF;
 }
 
 @layer base {

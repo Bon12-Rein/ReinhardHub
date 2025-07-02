@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
         />
       ))}
       
-      <div className="absolute inset-0 bg-gradient-to-br from-[#5B2C6F]/95 via-[#8E44AD]/85 to-[#FFA500]/75 mix-blend-multiply z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#008080]/95 via-[#00CCA4]/85 to-[#FF8C00]/75 mix-blend-multiply z-0"></div>
       
       <div className="container mx-auto px-6 lg:px-8 relative z-10">
         <div className="max-w-2xl">

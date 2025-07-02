@@ -5,18 +5,18 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#00CED1',
-          dark: '#008B8B',
-          light: '#40E0D0'
+          DEFAULT: '#008080',
+          dark: '#006666',
+          light: '#00A0A0'
         },
         secondary: {
-          DEFAULT: '#0044CC',
-          dark: '#003399'
+          DEFAULT: '#00CCA4',
+          dark: '#00B894'
         },
         accent: '#FF8C00'
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #00CED1, #0044CC, #FF8C00)'
+        'gradient-primary': 'linear-gradient(135deg, #008080, #00CCA4, #FF8C00)'
       }
     },
   },

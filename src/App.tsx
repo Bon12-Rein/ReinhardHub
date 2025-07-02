@@ -14,7 +14,7 @@ import CookieConsent from './components/CookieConsent';
 
 const App = () => {
   return (
-    <div className="bg-gray-50 text-gray-800">
+    <div className="bg-[#FEFFFF] text-gray-800">
       <Header />
       <Hero />
       <Services />
