@@ -60,26 +60,26 @@ const Header: React.FC = () => {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-6'
+          scrolled ? 'bg-white shadow-sm py-4' : 'bg-white py-4'
         }`}
       >
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="flex items-center">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
             <a href="#" className="flex items-center">
               <div className="text-2xl font-bold">
-                <span className={scrolled ? 'text-primary' : 'text-white'}>TELISPAC </span>
+                <span className="text-primary">TELISPAC </span>
                 <span className="text-secondary">DIGITAL</span>
               </div>
             </a>
 
-            <nav className="hidden lg:flex items-center ml-12 space-x-8">
+            {/* Desktop Navigation - Centered */}
+            <nav className="hidden lg:flex items-center space-x-12">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`${
-                    scrolled ? 'text-gray-800' : 'text-white'
-                  } hover:text-secondary transition-colors duration-200 font-medium`}
+                  className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide"
                 >
                   {t(link.name)}
                 </a>
@@ -88,9 +88,7 @@ const Header: React.FC = () => {
               <div className="relative group">
                 <a
                   href="#services"
-                  className={`${
-                    scrolled ? 'text-gray-800' : 'text-white'
-                  } hover:text-secondary transition-colors duration-200 font-medium`}
+                  className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide"
                 >
                   {t('Services')}
                 </a>
@@ -110,54 +108,52 @@ const Header: React.FC = () => {
               </div>
             </nav>
 
-            <div className="hidden lg:flex items-center ml-auto space-x-6">
-              <button
-                onClick={() => setShowSignUpModal(true)}
-                className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105"
-              >
-                {t('Work With Us')}
-              </button>
-
+            {/* Right Side Actions */}
+            <div className="hidden lg:flex items-center space-x-6">
               <a
                 href="#contact"
-                className={`font-medium transition-colors duration-200 ${
-                  scrolled ? 'text-gray-800 hover:text-primary' : 'text-white hover:text-secondary'
-                }`}
+                className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide"
               >
                 {t('Contact Us')}
               </a>
 
+              <button
+                onClick={() => setShowSignUpModal(true)}
+                className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105 text-sm"
+              >
+                {t('Work With Us')}
+              </button>
+
               <div className="relative group">
-                <button className={`flex items-center space-x-2 ${
-                  scrolled ? 'text-gray-800' : 'text-white'
-                }`}>
-                  <Globe size={20} />
-                  <span className="ml-1">{languages.find(lang => lang.code === i18n.language)?.label || 'EN'} ({languages.find(lang => lang.code === i18n.language)?.flag || '🇬🇧'})</span>
+                <button className="flex items-center space-x-2 text-gray-700 hover:text-primary transition-colors duration-200">
+                  <Globe size={18} />
+                  <span className="text-sm">{languages.find(lang => lang.code === i18n.language)?.label || 'EN'}</span>
                 </button>
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
-                      className="w-full text-left px-4 py-2 hover:bg-gray-50 flex items-center space-x-3"
+                      className="w-full text-left px-4 py-2 hover:bg-gray-50 flex items-center space-x-3 text-sm"
                     >
                       <span>{lang.flag}</span>
                       <span>{lang.name}</span>
-                      <span className="ml-auto text-sm text-gray-500">{lang.label}</span>
+                      <span className="ml-auto text-xs text-gray-500">{lang.label}</span>
                     </button>
                   ))}
                 </div>
               </div>
             </div>
 
+            {/* Mobile Menu Button */}
             <button
               className="lg:hidden ml-auto text-3xl focus:outline-none"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? (
-                <X className={scrolled ? 'text-primary' : 'text-white'} size={30} />
+                <X className="text-primary" size={28} />
               ) : (
-                <Menu className={scrolled ? 'text-primary' : 'text-white'} size={30} />
+                <Menu className="text-gray-700" size={28} />
               )}
             </button>
           </div>
@@ -165,53 +161,78 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed inset-0 bg-gray-900 bg-opacity-95 z-40 transform transition-transform duration-300 ease-in-out ${
+          className={`fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           } lg:hidden`}
         >
-          <div className="flex flex-col items-center justify-center h-full space-y-6 text-white text-xl">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="hover:text-secondary transition-colors duration-200"
+          <div className="flex flex-col h-full">
+            {/* Mobile Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <div className="text-xl font-bold">
+                <span className="text-primary">TELISPAC </span>
+                <span className="text-secondary">DIGITAL</span>
+              </div>
+              <button
                 onClick={() => setIsOpen(false)}
+                className="text-gray-700"
               >
-                {t(link.name)}
-              </a>
-            ))}
-
-            <div className="flex flex-col items-center space-y-4">
-              <span className="text-secondary font-medium">{t('Services')}</span>
-              {services.map((service) => (
-                <a
-                  key={service.name}
-                  href={service.href}
-                  className="text-white hover:text-secondary transition-colors duration-200"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {t(service.name)}
-                </a>
-              ))}
+                <X size={24} />
+              </button>
             </div>
 
-            <a
-              href="#contact"
-              className="hover:text-secondary transition-colors duration-200"
-              onClick={() => setIsOpen(false)}
-            >
-              {t('Contact Us')}
-            </a>
-            
-            <button
-              onClick={() => {
-                setShowSignUpModal(true);
-                setIsOpen(false);
-              }}
-              className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full font-medium transition-all duration-200"
-            >
-              {t('Work With Us')}
-            </button>
+            {/* Mobile Navigation */}
+            <div className="flex-1 overflow-y-auto p-6">
+              <div className="space-y-6">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="block text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {t(link.name)}
+                  </a>
+                ))}
+
+                <div className="border-t border-gray-200 pt-6">
+                  <div className="text-gray-500 font-medium text-sm uppercase tracking-wide mb-4">
+                    {t('Services')}
+                  </div>
+                  <div className="space-y-4 pl-4">
+                    {services.map((service) => (
+                      <a
+                        key={service.name}
+                        href={service.href}
+                        className="block text-gray-600 hover:text-primary transition-colors duration-200"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {t(service.name)}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="border-t border-gray-200 pt-6">
+                  <a
+                    href="#contact"
+                    className="block text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-lg mb-6"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {t('Contact Us')}
+                  </a>
+                  
+                  <button
+                    onClick={() => {
+                      setShowSignUpModal(true);
+                      setIsOpen(false);
+                    }}
+                    className="w-full bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-medium transition-all duration-200"
+                  >
+                    {t('Work With Us')}
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
