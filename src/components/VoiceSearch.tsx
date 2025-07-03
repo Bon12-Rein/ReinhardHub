@@ -241,7 +241,7 @@ const VoiceSearch: React.FC<VoiceSearchProps> = ({ onNavigate }) => {
                 <div className="bg-primary/10 p-3 rounded-lg">
                   <p className="text-sm text-primary">
                     <strong>Tip:</strong> Speak clearly and wait for the system to process your command. 
-                    You can also try variations like "view services" or "show me your work".
+                    You can also try variations like "view services\" or "show me your work".
                   </p>
                 </div>
               </div>
