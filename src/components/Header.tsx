@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe, LogIn } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import SignUpModal from './SignUpModal';
-import LoginModal from './LoginModal';
 import { useTranslation } from 'react-i18next';
 import Cookies from 'js-cookie';
 
@@ -9,7 +8,6 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showSignUpModal, setShowSignUpModal] = useState(false);
-  const [showLoginModal, setShowLoginModal] = useState(false);
   const { t, i18n } = useTranslation();
   
   const languages = [
@@ -114,15 +112,6 @@ const Header: React.FC = () => {
 
             <div className="hidden lg:flex items-center ml-auto space-x-6">
               <button
-                onClick={() => setShowLoginModal(true)}
-                className={`font-medium transition-colors duration-200 ${
-                  scrolled ? 'text-gray-800 hover:text-primary' : 'text-white hover:text-secondary'
-                }`}
-              >
-                {t('Log In')}
-              </button>
-
-              <button
                 onClick={() => setShowSignUpModal(true)}
                 className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105"
               >
@@ -213,15 +202,7 @@ const Header: React.FC = () => {
             >
               {t('Contact Us')}
             </a>
-            <button
-              onClick={() => {
-                setShowLoginModal(true);
-                setIsOpen(false);
-              }}
-              className="hover:text-secondary transition-colors duration-200"
-            >
-              {t('Log In')}
-            </button>
+            
             <button
               onClick={() => {
                 setShowSignUpModal(true);
@@ -236,7 +217,6 @@ const Header: React.FC = () => {
       </header>
 
       <SignUpModal isOpen={showSignUpModal} onClose={() => setShowSignUpModal(false)} />
-      <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} />
     </>
   );
 };
