@@ -109,18 +109,18 @@ const Header: React.FC = () => {
                     </div>
                   </div>
                 </div>
+
+                <a
+                  href="#contact"
+                  className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide whitespace-nowrap"
+                >
+                  {t('Contact Us')}
+                </a>
               </div>
             </nav>
 
             {/* Right Side Actions - Fixed width */}
             <div className="hidden lg:flex items-center justify-end space-x-8 w-64">
-              <a
-                href="#contact"
-                className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide whitespace-nowrap"
-              >
-                {t('Contact Us')}
-              </a>
-
               <button
                 onClick={() => setShowSignUpModal(true)}
                 className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105 text-sm whitespace-nowrap"
