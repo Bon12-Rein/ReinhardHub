@@ -37,20 +37,20 @@ const Header: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const solutions = [
+  const services = [
     { name: 'Branding & Strategy', href: '#services' },
-    { name: 'Marketing Strategy', href: '#services' },
+    { name: 'Marketing', href: '#services' },
     { name: 'Web & ECommerce', href: '#services' },
-    { name: 'Creative Services', href: '#services' },
     { name: 'AI & Automation', href: '#services' },
     { name: 'Tech & Innovation', href: '#services' }
   ];
 
   const navLinks = [
     { name: 'About', href: '#about' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Digital Products', href: '#digital-products' },
-    { name: 'Case Studies', href: '#work' }
+    { name: 'Our Work', href: '#work' },
+    { name: 'Resources', href: '#blog' },
+    { name: 'Careers', href: '#careers' },
+    { name: 'Academy', href: '#digital-products' }
   ];
 
   const changeLanguage = (lng: string) => {
@@ -74,31 +74,7 @@ const Header: React.FC = () => {
               </div>
             </a>
 
-            <nav className="hidden md:flex items-center ml-12 space-x-8">
-              <div className="relative group">
-                <a
-                  href="#services"
-                  className={`${
-                    scrolled ? 'text-gray-800' : 'text-white'
-                  } hover:text-secondary transition-colors duration-200 font-medium`}
-                >
-                  {t('Solutions')}
-                </a>
-                <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <div className="bg-primary rounded-xl shadow-lg p-2 flex space-x-1 whitespace-nowrap">
-                    {solutions.map((solution) => (
-                      <a
-                        key={solution.name}
-                        href={solution.href}
-                        className="px-4 py-2 text-secondary hover:text-white hover:bg-primary-dark rounded-lg transition-colors duration-200"
-                      >
-                        {t(solution.name)}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
+            <nav className="hidden lg:flex items-center ml-12 space-x-8">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
@@ -110,18 +86,33 @@ const Header: React.FC = () => {
                   {t(link.name)}
                 </a>
               ))}
+
+              <div className="relative group">
+                <a
+                  href="#services"
+                  className={`${
+                    scrolled ? 'text-gray-800' : 'text-white'
+                  } hover:text-secondary transition-colors duration-200 font-medium`}
+                >
+                  {t('Services')}
+                </a>
+                <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="bg-white rounded-xl shadow-lg p-4 min-w-[200px] border border-gray-100">
+                    {services.map((service) => (
+                      <a
+                        key={service.name}
+                        href={service.href}
+                        className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200 font-medium"
+                      >
+                        {t(service.name)}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </nav>
 
-            <div className="hidden md:flex items-center ml-auto space-x-6">
-              <a
-                href="#contact"
-                className={`font-medium transition-colors duration-200 ${
-                  scrolled ? 'text-gray-800 hover:text-primary' : 'text-white hover:text-secondary'
-                }`}
-              >
-                {t('Contact Us')}
-              </a>
-
+            <div className="hidden lg:flex items-center ml-auto space-x-6">
               <button
                 onClick={() => setShowLoginModal(true)}
                 className={`font-medium transition-colors duration-200 ${
@@ -135,8 +126,17 @@ const Header: React.FC = () => {
                 onClick={() => setShowSignUpModal(true)}
                 className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105"
               >
-                {t('Get Started')}
+                {t('Work With Us')}
               </button>
+
+              <a
+                href="#contact"
+                className={`font-medium transition-colors duration-200 ${
+                  scrolled ? 'text-gray-800 hover:text-primary' : 'text-white hover:text-secondary'
+                }`}
+              >
+                {t('Contact Us')}
+              </a>
 
               <div className="relative group">
                 <button className={`flex items-center space-x-2 ${
@@ -162,7 +162,7 @@ const Header: React.FC = () => {
             </div>
 
             <button
-              className="md:hidden ml-auto text-3xl focus:outline-none"
+              className="lg:hidden ml-auto text-3xl focus:outline-none"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? (
@@ -174,26 +174,13 @@ const Header: React.FC = () => {
           </div>
         </div>
 
+        {/* Mobile Menu */}
         <div
           className={`fixed inset-0 bg-gray-900 bg-opacity-95 z-40 transform transition-transform duration-300 ease-in-out ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
-          } md:hidden`}
+          } lg:hidden`}
         >
           <div className="flex flex-col items-center justify-center h-full space-y-6 text-white text-xl">
-            <div className="flex flex-col items-center space-y-4">
-              <span className="text-secondary font-medium">{t('Solutions')}</span>
-              {solutions.map((solution) => (
-                <a
-                  key={solution.name}
-                  href={solution.href}
-                  className="text-white hover:text-secondary transition-colors duration-200"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {t(solution.name)}
-                </a>
-              ))}
-            </div>
-
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -204,6 +191,21 @@ const Header: React.FC = () => {
                 {t(link.name)}
               </a>
             ))}
+
+            <div className="flex flex-col items-center space-y-4">
+              <span className="text-secondary font-medium">{t('Services')}</span>
+              {services.map((service) => (
+                <a
+                  key={service.name}
+                  href={service.href}
+                  className="text-white hover:text-secondary transition-colors duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {t(service.name)}
+                </a>
+              ))}
+            </div>
+
             <a
               href="#contact"
               className="hover:text-secondary transition-colors duration-200"
@@ -227,7 +229,7 @@ const Header: React.FC = () => {
               }}
               className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full font-medium transition-all duration-200"
             >
-              {t('Get Started')}
+              {t('Work With Us')}
             </button>
           </div>
         </div>

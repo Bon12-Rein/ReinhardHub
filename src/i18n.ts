@@ -11,13 +11,22 @@ i18n
         translation: {
           // Navigation
           'Home': 'Home',
-          'About Us': 'About Us',
+          'About': 'About',
           'Services': 'Services',
-          'Blog': 'Blog',
-          'Digital Products': 'Digital Products',
-          'Case Studies': 'Case Studies',
+          'Our Work': 'Our Work',
+          'Resources': 'Resources',
+          'Careers': 'Careers',
+          'Academy': 'Academy',
           'Contact Us': 'Contact Us',
-          'Get Started': 'Get Started',
+          'Work With Us': 'Work With Us',
+          'Log In': 'Log In',
+          
+          // Services
+          'Branding & Strategy': 'Branding & Strategy',
+          'Marketing': 'Marketing',
+          'Web & ECommerce': 'Web & ECommerce',
+          'AI & Automation': 'AI & Automation',
+          'Tech & Innovation': 'Tech & Innovation',
           
           // Footer
           'Empowering your brand with smart digital solutions.': 'Empowering your brand with smart digital solutions.',
@@ -25,74 +34,125 @@ i18n
           'Copyright © 2025 Telispac Digital. All Rights Reserved.': 'Copyright © 2025 Telispac Digital. All Rights Reserved.',
           
           // Modal
-          'Get Started with Telispac Digital': 'Get Started with Telispac Digital',
-          'Sign up to explore our services and transform your digital presence.': 'Sign up to explore our services and transform your digital presence.',
-          'Name': 'Name',
-          'Email': 'Email',
+          'Start Your Digital Journey': 'Start Your Digital Journey',
+          'Transform your brand with innovative digital solutions': 'Transform your brand with innovative digital solutions',
+          'Full Name': 'Full Name',
+          'Email Address': 'Email Address',
           'Business Type': 'Business Type',
+          'Service of Interest': 'Service of Interest',
           'Select business type': 'Select business type',
+          'Select a service': 'Select a service',
           'Startup': 'Startup',
           'Small Business': 'Small Business',
           'Medium Enterprise': 'Medium Enterprise',
           'Large Corporation': 'Large Corporation',
           'Individual/Freelancer': 'Individual/Freelancer',
+          'Branding': 'Branding',
+          'Web Design': 'Web Design',
+          'AI Tools': 'AI Tools',
+          'Digital Marketing': 'Digital Marketing',
+          'Other': 'Other',
+          'Get Started': 'Get Started',
+          'FREE Brand Strategy Starter Kit': 'FREE Brand Strategy Starter Kit',
+          'Sign up now and get our comprehensive brand strategy guide!': 'Sign up now and get our comprehensive brand strategy guide!',
+          'By signing up, you agree to our Terms of Service and Privacy Policy': 'By signing up, you agree to our Terms of Service and Privacy Policy',
+          
+          // Login Modal
+          'Log In to Your Account': 'Log In to Your Account',
+          'Email': 'Email',
+          'Password': 'Password',
+          'Remember Me': 'Remember Me',
+          'Forgot Password?': 'Forgot Password?',
+          "Don't have an account?": "Don't have an account?",
           'Sign Up': 'Sign Up'
         }
       },
       fr: {
         translation: {
-          // Add French translations
+          // Navigation
           'Home': 'Accueil',
-          'About Us': 'À Propos',
+          'About': 'À Propos',
           'Services': 'Services',
-          'Blog': 'Blog',
-          'Digital Products': 'Produits Numériques',
-          'Case Studies': 'Études de Cas',
+          'Our Work': 'Nos Réalisations',
+          'Resources': 'Ressources',
+          'Careers': 'Carrières',
+          'Academy': 'Académie',
           'Contact Us': 'Contactez-Nous',
-          'Get Started': 'Commencer'
-          // Add more translations as needed
+          'Work With Us': 'Travaillez Avec Nous',
+          'Log In': 'Se Connecter',
+          
+          // Services
+          'Branding & Strategy': 'Image de Marque & Stratégie',
+          'Marketing': 'Marketing',
+          'Web & ECommerce': 'Web & E-Commerce',
+          'AI & Automation': 'IA & Automatisation',
+          'Tech & Innovation': 'Tech & Innovation'
         }
       },
       sw: {
         translation: {
-          // Add Swahili translations
+          // Navigation
           'Home': 'Nyumbani',
-          'About Us': 'Kuhusu Sisi',
+          'About': 'Kuhusu',
           'Services': 'Huduma',
-          'Blog': 'Blogu',
-          'Digital Products': 'Bidhaa za Dijitali',
-          'Case Studies': 'Tafiti',
+          'Our Work': 'Kazi Zetu',
+          'Resources': 'Rasilimali',
+          'Careers': 'Kazi',
+          'Academy': 'Chuo',
           'Contact Us': 'Wasiliana Nasi',
-          'Get Started': 'Anza'
-          // Add more translations as needed
+          'Work With Us': 'Fanya Kazi Nasi',
+          'Log In': 'Ingia',
+          
+          // Services
+          'Branding & Strategy': 'Uongozi wa Chapa & Mkakati',
+          'Marketing': 'Uuzaji',
+          'Web & ECommerce': 'Tovuti & Biashara ya Mtandaoni',
+          'AI & Automation': 'Akili Bandia & Otomatiki',
+          'Tech & Innovation': 'Teknolojia & Uvumbuzi'
         }
       },
       ar: {
         translation: {
-          // Add Arabic translations
+          // Navigation
           'Home': 'الرئيسية',
-          'About Us': 'من نحن',
+          'About': 'من نحن',
           'Services': 'خدماتنا',
-          'Blog': 'المدونة',
-          'Digital Products': 'المنتجات الرقمية',
-          'Case Studies': 'دراسات الحالة',
+          'Our Work': 'أعمالنا',
+          'Resources': 'الموارد',
+          'Careers': 'الوظائف',
+          'Academy': 'الأكاديمية',
           'Contact Us': 'اتصل بنا',
-          'Get Started': 'ابدأ الآن'
-          // Add more translations as needed
+          'Work With Us': 'اعمل معنا',
+          'Log In': 'تسجيل الدخول',
+          
+          // Services
+          'Branding & Strategy': 'العلامة التجارية والاستراتيجية',
+          'Marketing': 'التسويق',
+          'Web & ECommerce': 'الويب والتجارة الإلكترونية',
+          'AI & Automation': 'الذكاء الاصطناعي والأتمتة',
+          'Tech & Innovation': 'التكنولوجيا والابتكار'
         }
       },
       pt: {
         translation: {
-          // Add Portuguese translations
+          // Navigation
           'Home': 'Início',
-          'About Us': 'Sobre Nós',
+          'About': 'Sobre',
           'Services': 'Serviços',
-          'Blog': 'Blog',
-          'Digital Products': 'Produtos Digitais',
-          'Case Studies': 'Casos de Estudo',
+          'Our Work': 'Nosso Trabalho',
+          'Resources': 'Recursos',
+          'Careers': 'Carreiras',
+          'Academy': 'Academia',
           'Contact Us': 'Contacte-Nos',
-          'Get Started': 'Começar'
-          // Add more translations as needed
+          'Work With Us': 'Trabalhe Conosco',
+          'Log In': 'Entrar',
+          
+          // Services
+          'Branding & Strategy': 'Marca & Estratégia',
+          'Marketing': 'Marketing',
+          'Web & ECommerce': 'Web & E-Commerce',
+          'AI & Automation': 'IA & Automação',
+          'Tech & Innovation': 'Tech & Inovação'
         }
       }
     },
