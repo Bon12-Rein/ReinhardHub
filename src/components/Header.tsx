@@ -64,62 +64,66 @@ const Header: React.FC = () => {
         }`}
       >
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <a href="#" className="flex items-center">
-              <div className="text-2xl font-bold">
-                <span className="text-primary">TELISPAC </span>
-                <span className="text-secondary">DIGITAL</span>
-              </div>
-            </a>
+          <div className="flex items-center justify-between w-full">
+            {/* Logo - Fixed width */}
+            <div className="flex-shrink-0 w-64">
+              <a href="#" className="flex items-center">
+                <div className="text-2xl font-bold">
+                  <span className="text-primary">TELISPAC </span>
+                  <span className="text-secondary">DIGITAL</span>
+                </div>
+              </a>
+            </div>
 
-            {/* Desktop Navigation - Centered */}
-            <nav className="hidden lg:flex items-center space-x-12">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide"
-                >
-                  {t(link.name)}
-                </a>
-              ))}
+            {/* Desktop Navigation - Centered with even spacing */}
+            <nav className="hidden lg:flex items-center justify-center flex-1">
+              <div className="flex items-center space-x-10">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide whitespace-nowrap"
+                  >
+                    {t(link.name)}
+                  </a>
+                ))}
 
-              <div className="relative group">
-                <a
-                  href="#services"
-                  className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide"
-                >
-                  {t('Services')}
-                </a>
-                <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <div className="bg-white rounded-xl shadow-lg p-4 min-w-[200px] border border-gray-100">
-                    {services.map((service) => (
-                      <a
-                        key={service.name}
-                        href={service.href}
-                        className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200 font-medium"
-                      >
-                        {t(service.name)}
-                      </a>
-                    ))}
+                <div className="relative group">
+                  <a
+                    href="#services"
+                    className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide whitespace-nowrap"
+                  >
+                    {t('Services')}
+                  </a>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div className="bg-white rounded-xl shadow-lg p-4 min-w-[200px] border border-gray-100">
+                      {services.map((service) => (
+                        <a
+                          key={service.name}
+                          href={service.href}
+                          className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200 font-medium"
+                        >
+                          {t(service.name)}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </nav>
 
-            {/* Right Side Actions */}
-            <div className="hidden lg:flex items-center space-x-6">
+            {/* Right Side Actions - Fixed width */}
+            <div className="hidden lg:flex items-center justify-end space-x-8 w-64">
               <a
                 href="#contact"
-                className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide"
+                className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide whitespace-nowrap"
               >
                 {t('Contact Us')}
               </a>
 
               <button
                 onClick={() => setShowSignUpModal(true)}
-                className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105 text-sm"
+                className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105 text-sm whitespace-nowrap"
               >
                 {t('Work With Us')}
               </button>
