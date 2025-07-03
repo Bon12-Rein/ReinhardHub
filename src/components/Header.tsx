@@ -123,12 +123,12 @@ const Header: React.FC = () => {
 
             {/* Right Side Actions - Fixed width */}
             <div className="hidden lg:flex items-center justify-end space-x-8 w-64">
-              <button
-                onClick={() => setShowSignUpModal(true)}
-                className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full font-medium transition-all duration-200 transform hover:scale-105 text-sm whitespace-nowrap"
+              <a
+                href="#contact"
+                className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide whitespace-nowrap"
               >
                 {t('Work With Us')}
-              </button>
+              </a>
 
               <div className="relative group">
                 <button className="flex items-center space-x-2 text-gray-700 hover:text-primary transition-colors duration-200">
@@ -227,15 +227,13 @@ const Header: React.FC = () => {
                     {t('Contact Us')}
                   </a>
                   
-                  <button
-                    onClick={() => {
-                      setShowSignUpModal(true);
-                      setIsOpen(false);
-                    }}
-                    className="w-full bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-full font-medium transition-all duration-200"
+                  <a
+                    href="#contact"
+                    className="block text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-lg mb-6"
+                    onClick={() => setIsOpen(false)}
                   >
                     {t('Work With Us')}
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
