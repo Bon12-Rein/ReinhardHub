@@ -95,14 +95,14 @@ const Footer: React.FC = () => {
               {t('Empowering your brand with smart digital solutions.')}
             </p>
             <h4 className="text-white font-semibold mb-4">{t('Follow Us')}</h4>
-            <div className="flex space-x-4">
+            <div className="flex space-x-3">
               {socialLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-10 h-10 flex items-center justify-center ${link.bgColor} ${link.hoverColor} text-white rounded-full transition-all duration-300 transform hover:scale-110`}
+                  className={`w-12 h-12 flex items-center justify-center ${link.bgColor} ${link.hoverColor} text-white rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg`}
                   aria-label={link.name}
                 >
                   {link.icon}
