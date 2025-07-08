@@ -90,27 +90,6 @@ const Header: React.FC = () => {
                 ))}
 
                 <div className="relative group">
-                  <a
-                    href="#services"
-                    className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide whitespace-nowrap"
-                  >
-                    {t('Services')}
-                  </a>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="bg-white rounded-xl shadow-lg p-4 border border-gray-100 whitespace-nowrap">
-                      <div className="flex space-x-6">
-                        {services.map((service) => (
-                          <a
-                            key={service.name}
-                            href={service.href}
-                            className="px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200 font-medium text-sm whitespace-nowrap"
-                          >
-                            {t(service.name)}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </nav>
