@@ -104,7 +104,7 @@ const Header: React.FC = () => {
               </a>
 
               <div className="relative group">
-                  className="text-black"
+                <button className="flex items-center space-x-2 text-black hover:text-primary transition-colors duration-200">
                   <Globe size={18} />
                   <span className="text-sm">{languages.find(lang => lang.code === i18n.language)?.label || 'EN'}</span>
                 </button>
