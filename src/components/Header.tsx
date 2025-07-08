@@ -45,6 +45,7 @@ const Header: React.FC = () => {
 
   const navLinks = [
     { name: 'About', href: '#about' },
+    { name: 'Services', href: '#services' },
     { name: 'Our Work', href: '#work' },
     { name: 'Resources', href: '#blog' },
     { name: 'Careers', href: '#careers' },
@@ -104,13 +105,6 @@ const Header: React.FC = () => {
                             href={service.href}
                             className="px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200 font-medium text-sm whitespace-nowrap"
                           >
-                            {t(service.name)}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </nav>
 
