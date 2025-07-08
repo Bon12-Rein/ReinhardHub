@@ -46,8 +46,8 @@ const Blog: React.FC = () => {
     <section id="blog" className="py-20 bg-white">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Latest Insights</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Latest Insights</h2>
+          <p className="text-xl text-black max-w-2xl mx-auto">
             Stay updated with the latest trends, tips, and strategies in digital innovation.
           </p>
         </div>
@@ -72,7 +72,7 @@ const Blog: React.FC = () => {
               </div>
               
               <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-4">
+                <div className="flex items-center text-sm text-black mb-4">
                   <Calendar size={16} className="mr-2" />
                   <span>{post.date}</span>
                   <span className="mx-2">•</span>
@@ -80,11 +80,11 @@ const Blog: React.FC = () => {
                   <span>{post.author}</span>
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-800 mb-3 line-clamp-2">
+                <h3 className="text-xl font-bold text-black mb-3 line-clamp-2">
                   {post.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-black mb-4 line-clamp-3">
                   {post.excerpt}
                 </p>
                 

@@ -129,8 +129,8 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Start Your Project</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Start Your Project</h2>
+          <p className="text-xl text-black max-w-2xl mx-auto">
             Ready to transform your digital presence? Let's discuss your project and create something amazing together.
           </p>
         </div>
@@ -138,7 +138,7 @@ const Contact: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           <div className="lg:w-2/5">
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-black mb-6">Contact Information</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -146,8 +146,8 @@ const Contact: React.FC = () => {
                     <MapPin className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">Our Location</h4>
-                    <p className="text-gray-600">Kamiti Rd, Roysambu, Nairobi</p>
+                    <h4 className="font-semibold text-black">Our Location</h4>
+                    <p className="text-black">Kamiti Rd, Roysambu, Nairobi</p>
                   </div>
                 </div>
                 
@@ -156,8 +156,8 @@ const Contact: React.FC = () => {
                     <Phone className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">Phone Number</h4>
-                    <p className="text-gray-600">+254 716 428 986</p>
+                    <h4 className="font-semibold text-black">Phone Number</h4>
+                    <p className="text-black">+254 716 428 986</p>
                   </div>
                 </div>
                 
@@ -166,8 +166,8 @@ const Contact: React.FC = () => {
                     <Mail className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">Email Address</h4>
-                    <p className="text-gray-600">info@telispacdigital.com</p>
+                    <h4 className="font-semibold text-black">Email Address</h4>
+                    <p className="text-black">info@telispacdigital.com</p>
                   </div>
                 </div>
               </div>
@@ -189,7 +189,7 @@ const Contact: React.FC = () => {
               <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg p-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <label htmlFor="fullName" className="block text-gray-700 font-medium mb-2">
+                    <label htmlFor="fullName" className="block text-black font-medium mb-2">
                       Full Name *
                     </label>
                     <input
@@ -205,7 +205,7 @@ const Contact: React.FC = () => {
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                    <label htmlFor="email" className="block text-black font-medium mb-2">
                       Email Address *
                     </label>
                     <input

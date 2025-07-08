@@ -66,8 +66,8 @@ const Work: React.FC = () => {
     <section id="work" className="py-20 bg-white">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Work</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Work</h2>
+          <p className="text-xl text-black max-w-2xl mx-auto">
             Discover how we've helped students, startups, and businesses transform their digital presence.
           </p>
           
@@ -80,7 +80,7 @@ const Work: React.FC = () => {
                 className={`px-6 py-2 rounded-full capitalize transition-all duration-200 ${
                   activeCategory === category
                     ? 'bg-primary text-white'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    : 'bg-gray-100 text-black hover:bg-gray-200'
                 }`}
               >
                 {category}

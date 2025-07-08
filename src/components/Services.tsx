@@ -84,8 +84,8 @@ const Services: React.FC = () => {
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Solutions</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Solutions</h2>
+          <p className="text-xl text-black max-w-2xl mx-auto">
             Comprehensive digital solutions tailored to grow your business
           </p>
         </div>
@@ -98,11 +98,11 @@ const Services: React.FC = () => {
             >
               <div className="flex items-center mb-6">
                 <div className="text-primary mr-4">{service.icon}</div>
-                <h3 className="text-xl font-bold text-gray-800">{service.title}</h3>
+                <h3 className="text-xl font-bold text-black">{service.title}</h3>
               </div>
               <ul className="space-y-3">
                 {service.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="text-gray-600 flex items-start">
+                  <li key={itemIndex} className="text-black flex items-start">
                     <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     {item}
                   </li>

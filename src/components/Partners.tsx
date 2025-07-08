@@ -48,8 +48,8 @@ const Partners: React.FC = () => {
     <section id="partners" className="py-20 bg-white">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Partners</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Partners</h2>
+          <p className="text-xl text-black max-w-2xl mx-auto">
             Collaborating with industry leaders to deliver exceptional digital solutions.
           </p>
         </div>
@@ -68,9 +68,9 @@ const Partners: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">{partner.name}</h3>
+              <h3 className="text-xl font-bold text-black mb-2">{partner.name}</h3>
               {partner.description && (
-                <p className="text-gray-600">{partner.description}</p>
+                <p className="text-black">{partner.description}</p>
               )}
             </div>
           ))}
@@ -78,7 +78,7 @@ const Partners: React.FC = () => {
 
         {/* Trusted By Section */}
         <div className="mt-20">
-          <h3 className="text-2xl font-bold text-center text-gray-800 mb-12">Trusted By</h3>
+          <h3 className="text-2xl font-bold text-center text-black mb-12">Trusted By</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {trustedBy.map((client, index) => (
               <div

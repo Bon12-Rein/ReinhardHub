@@ -83,7 +83,7 @@ const Header: React.FC = () => {
                   <a
                     key={link.name}
                     href={link.href}
-                    className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide whitespace-nowrap"
+                    className="text-black hover:text-primary transition-colors duration-200 font-medium text-sm uppercase tracking-wide whitespace-nowrap"
                   >
                     {t(link.name)}
                   </a>
@@ -104,7 +104,7 @@ const Header: React.FC = () => {
               </a>
 
               <div className="relative group">
-                <button className="flex items-center space-x-2 text-gray-700 hover:text-primary transition-colors duration-200">
+                  className="text-black"
                   <Globe size={18} />
                   <span className="text-sm">{languages.find(lang => lang.code === i18n.language)?.label || 'EN'}</span>
                 </button>
@@ -132,7 +132,7 @@ const Header: React.FC = () => {
               {isOpen ? (
                 <X className="text-primary" size={28} />
               ) : (
-                <Menu className="text-gray-700" size={28} />
+                <Menu className="text-black" size={28} />
               )}
             </button>
           </div>
@@ -166,7 +166,7 @@ const Header: React.FC = () => {
                   <a
                     key={link.name}
                     href={link.href}
-                    className="block text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-lg"
+                    className="block text-black hover:text-primary transition-colors duration-200 font-medium text-lg"
                     onClick={() => setIsOpen(false)}
                   >
                     {t(link.name)}
@@ -174,7 +174,7 @@ const Header: React.FC = () => {
                 ))}
 
                 <div className="border-t border-gray-200 pt-6">
-                  <div className="text-gray-500 font-medium text-sm uppercase tracking-wide mb-4">
+                  <div className="text-black font-medium text-sm uppercase tracking-wide mb-4">
                     {t('Services')}
                   </div>
                   <div className="space-y-4 pl-4">
@@ -182,7 +182,7 @@ const Header: React.FC = () => {
                       <a
                         key={service.name}
                         href={service.href}
-                        className="block text-gray-600 hover:text-primary transition-colors duration-200"
+                        className="block text-black hover:text-primary transition-colors duration-200"
                         onClick={() => setIsOpen(false)}
                       >
                         {t(service.name)}

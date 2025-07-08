@@ -35,8 +35,8 @@ const FAQ: React.FC = () => {
     <section id="faq" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Frequently Asked Questions</h2>
+          <p className="text-xl text-black max-w-2xl mx-auto">
             Find quick answers to common questions about our services and process.
           </p>
         </div>
@@ -51,15 +51,15 @@ const FAQ: React.FC = () => {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold text-gray-800">{faq.question}</h3>
+                  <h3 className="text-lg font-semibold text-black">{faq.question}</h3>
                   {openIndex === index ? (
                     <Minus className="text-primary" size={20} />
                   ) : (
-                    <Plus className="text-gray-400" size={20} />
+                    <Plus className="text-black" size={20} />
                   )}
                 </div>
                 <div
-                  className={`mt-4 text-gray-600 transition-all duration-200 ${
+                  className={`mt-4 text-black transition-all duration-200 ${
                     openIndex === index ? 'block' : 'hidden'
                   }`}
                 >

@@ -38,9 +38,9 @@ const Footer: React.FC = () => {
           <div>
             <div className="text-3xl font-bold mb-6">
               <span className="text-white">TELISPAC </span>
-              <span className="text-secondary">DIGITAL</span>
+              <span className="text-black font-extrabold">DIGITAL</span>
             </div>
-            <p className="text-gray-400 mb-6">
+            <p className="text-white mb-6">
               {t('Empowering your brand with smart digital solutions.')}
             </p>
             <h4 className="text-white font-semibold mb-4">{t('Follow Us')}</h4>
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-primary text-gray-400 hover:text-white rounded-full transition-all duration-200"
+                  className="w-8 h-8 flex items-center justify-center bg-black hover:bg-white text-white hover:text-black rounded-full transition-all duration-200 font-bold"
                   aria-label={link.name}
                 >
                   {link.letter}
@@ -100,16 +100,16 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 pt-8 mt-8">
+        <div className="border-t border-white/30 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-500 text-sm mb-4 md:mb-0">
+            <p className="text-white text-sm mb-4 md:mb-0">
               {t('Copyright © 2025 Telispac Digital. All Rights Reserved.')}
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-500 hover:text-white text-sm">{t('Security')}</a>
-              <a href="#" className="text-gray-500 hover:text-white text-sm">{t('Terms')}</a>
-              <a href="#" className="text-gray-500 hover:text-white text-sm">{t('Privacy')}</a>
-              <a href="#" className="text-gray-500 hover:text-white text-sm">{t('Quality & Information')}</a>
+              <a href="#" className="text-white hover:text-black text-sm font-medium">{t('Security')}</a>
+              <a href="#" className="text-white hover:text-black text-sm font-medium">{t('Terms')}</a>
+              <a href="#" className="text-white hover:text-black text-sm font-medium">{t('Privacy')}</a>
+              <a href="#" className="text-white hover:text-black text-sm font-medium">{t('Quality & Information')}</a>
             </div>
           </div>
         </div>
