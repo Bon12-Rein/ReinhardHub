@@ -1,16 +1,16 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Facebook, Twitter, Youtube, Linkedin, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
   
   const socialLinks = [
-    { letter: 'F', name: 'Facebook', url: 'https://facebook.com/telispacdigital' },
-    { letter: 'X', name: 'Twitter', url: 'https://twitter.com/telispacdigital' },
-    { letter: 'Y', name: 'YouTube', url: 'https://youtube.com/@telispacdigital' },
-    { letter: 'L', name: 'LinkedIn', url: 'https://linkedin.com/company/telispacdigital' },
-    { letter: 'T', name: 'TikTok', url: 'https://tiktok.com/@telispacdigital' },
-    { letter: 'I', name: 'Instagram', url: 'https://instagram.com/telispacdigital' }
+    { icon: <Facebook size={18} />, name: 'Facebook', url: 'https://facebook.com/telispacdigital' },
+    { icon: <Twitter size={18} />, name: 'Twitter', url: 'https://twitter.com/telispacdigital' },
+    { icon: <Youtube size={18} />, name: 'YouTube', url: 'https://youtube.com/@telispacdigital' },
+    { icon: <Linkedin size={18} />, name: 'LinkedIn', url: 'https://linkedin.com/company/telispacdigital' },
+    { icon: <Instagram size={18} />, name: 'Instagram', url: 'https://instagram.com/telispacdigital' }
   ];
 
   const resourceLinks = [
@@ -45,16 +45,16 @@ const Footer: React.FC = () => {
             </p>
             <h4 className="text-white font-semibold mb-4">{t('Follow Us')}</h4>
             <div className="flex space-x-4">
-              {socialLinks.map(link => (
+              {socialLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 flex items-center justify-center bg-black hover:bg-white text-white hover:text-black rounded-full transition-all duration-200 font-bold"
+                  className="w-10 h-10 flex items-center justify-center bg-black hover:bg-white text-white hover:text-black rounded-full transition-all duration-200"
                   aria-label={link.name}
                 >
-                  {link.letter}
+                  {link.icon}
                 </a>
               ))}
             </div>
