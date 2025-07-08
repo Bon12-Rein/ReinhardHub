@@ -13,12 +13,48 @@ const Footer: React.FC = () => {
   const { t } = useTranslation();
   
   const socialLinks = [
-    { icon: <Facebook size={18} />, name: 'Facebook', url: 'https://facebook.com/telispacdigital' },
-    { icon: <Twitter size={18} />, name: 'Twitter', url: 'https://twitter.com/telispacdigital' },
-    { icon: <Youtube size={18} />, name: 'YouTube', url: 'https://youtube.com/@telispacdigital' },
-    { icon: <Linkedin size={18} />, name: 'LinkedIn', url: 'https://linkedin.com/company/telispacdigital' },
-    { icon: <Instagram size={18} />, name: 'Instagram', url: 'https://instagram.com/telispacdigital' },
-    { icon: <TikTokIcon size={18} />, name: 'TikTok', url: 'https://tiktok.com/@telispacdigital' }
+    { 
+      icon: <Facebook size={18} />, 
+      name: 'Facebook', 
+      url: 'https://facebook.com/telispacdigital',
+      bgColor: 'bg-[#1877F2]',
+      hoverColor: 'hover:bg-[#166FE5]'
+    },
+    { 
+      icon: <Twitter size={18} />, 
+      name: 'Twitter', 
+      url: 'https://twitter.com/telispacdigital',
+      bgColor: 'bg-[#1DA1F2]',
+      hoverColor: 'hover:bg-[#1A91DA]'
+    },
+    { 
+      icon: <Youtube size={18} />, 
+      name: 'YouTube', 
+      url: 'https://youtube.com/@telispacdigital',
+      bgColor: 'bg-[#FF0000]',
+      hoverColor: 'hover:bg-[#E60000]'
+    },
+    { 
+      icon: <Linkedin size={18} />, 
+      name: 'LinkedIn', 
+      url: 'https://linkedin.com/company/telispacdigital',
+      bgColor: 'bg-[#0A66C2]',
+      hoverColor: 'hover:bg-[#095BB0]'
+    },
+    { 
+      icon: <Instagram size={18} />, 
+      name: 'Instagram', 
+      url: 'https://instagram.com/telispacdigital',
+      bgColor: 'bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737]',
+      hoverColor: 'hover:from-[#7A2FB3] hover:via-[#E41A1A] hover:to-[#E56B2F]'
+    },
+    { 
+      icon: <TikTokIcon size={18} />, 
+      name: 'TikTok', 
+      url: 'https://tiktok.com/@telispacdigital',
+      bgColor: 'bg-[#000000]',
+      hoverColor: 'hover:bg-[#333333]'
+    }
   ];
 
   const resourceLinks = [
@@ -59,7 +95,7 @@ const Footer: React.FC = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 flex items-center justify-center bg-black hover:bg-white text-white hover:text-black rounded-full transition-all duration-200"
+                  className={`w-10 h-10 flex items-center justify-center ${link.bgColor} ${link.hoverColor} text-white rounded-full transition-all duration-300 transform hover:scale-110`}
                   aria-label={link.name}
                 >
                   {link.icon}
